@@ -1,0 +1,143 @@
+{
+	"require express": {
+		"prefix": "exp",
+		"body": [
+			"const express = require('express');",
+			"$1"
+		],
+		"description": "writes express require"
+	},
+	"create app": {
+		"prefix": "exp-app",
+		"body": [
+			"const app = express();",
+			"$1"
+		],
+		"description": "creates app by calling express"
+	},
+	"cors": {
+		"prefix": "cors",
+		"body": [
+			"const cors = require('cors');",
+			"$1"
+		],
+		"description": "requiring cors after install"
+	},
+	"port": {
+		"prefix": "port",
+		"body": [
+			"const port = process.env.PORT || ${1:5000};",
+			"$2"
+		],
+		"description": "creates the port with default value"
+	},
+	"cors-call": {
+		"prefix": "cors-call",
+		"body": [
+			"app.use(cors());",
+			"$1"
+		],
+		"description": "requiring cors after install"
+	},
+	"app-get": {
+		"prefix": "app-get",
+		"body": [
+			"app.get('${1:/}', (req, res) => {",
+				"res.send('${2:Hello world}')",
+			"});"
+		],
+		"description": "requiring cors after install"
+	},
+	"app-lis": {
+		"prefix": "app-lis",
+		"body": [
+			"app.listen(port, () => {",
+			"console.log(`listening port ${1:5000}`);",
+			"});"
+		],
+		"description": "requiring cors after install"
+	},
+	"express-template": {
+		"prefix": "exp-tem",
+		"body": [
+			"const express = require('express');",
+			"const app = express();",
+			"const port = process.env.PORT || ${1:5000};",
+			"",
+			"app.get('${2:/}', (req, res) => {",
+			"res.send('${3:Hello world}')",
+			"});",
+			"",
+			"app.listen(port, () => {",
+			"console.log(`listening port ${1:5000}`);",
+			"});"
+		],
+		"description": "requiring cors after install"
+	},
+	"queryselectorall": {
+		"prefix": "docqa",
+		"body": [
+			"document.querySelectorAll('$1');"
+		],
+		"description": "writes express require"
+	},
+	"document ele by id": {
+		"prefix": "docid",
+		"body": [
+			"document.getElementById('$1');"
+		],
+		"description": "writes express require"
+	},
+	"document by classname": {
+		"prefix": "doccl",
+		"body": [
+			"document.getElementsByClassName('$1');"
+		],
+		"description": "writes express require"
+	},
+	"select by id and event": {
+		"prefix": "docid-eve",
+		"body": [
+			"document.getElementById('calculate').addEventListener('click', () => {",
+			"",
+			"});"
+
+		],
+		"description": "writes express require"
+	},
+	"var with const": {
+		"prefix": "vcon",
+		"body": [
+			"const ${1:name} = ${2:value};"
+		],
+		"description": "writes express require"
+	},
+	"var with let": {
+		"prefix": "vlet",
+		"body": [
+			"let ${1:name} = ${2:value};"
+		],
+		"description": "writes express require"
+	},
+	"function": {
+		"prefix": "func",
+		"body": [
+			"function ${1:name}($2){",
+			"$3",
+			"};",
+			"$4"
+		],
+		"description": "writes express require"
+	},
+	"arrow function": {
+		"prefix": "afunc",
+		"body": [
+			"const ${1:myFunc} = ($2) => {",
+			"$3",
+			"};",
+			"$4"
+
+		],
+		"description": "writes express require"
+	},
+}
